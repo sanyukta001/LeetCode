@@ -14,14 +14,21 @@ class Solution {
                 c++;
             }
         }
-        String w = "";
+        // String w = "";
+        StringBuilder w = new StringBuilder();
         for(int i=1;i<=c;i++)
         {
             if(i==c)
-                w = w + arr[i];
+            {
+                // w = w + arr[i];
+                w.append(arr[i]);
+            }
             else
-                w = w + arr[i]+" ";
+            {
+                // w = w + arr[i]+" ";
+                w.append(arr[i]).append(" ");
+            }
         }
-        return w;
+        return w.toString();
     }
 }
