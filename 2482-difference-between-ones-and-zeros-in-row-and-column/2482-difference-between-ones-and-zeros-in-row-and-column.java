@@ -1,8 +1,4 @@
-// class Solution {
-//     public int[][] onesMinusZeros(int[][] grid) {
-        
-//     }
-// }
+
 class Solution {
     public int[][] onesMinusZeros(int[][] grid) {
         int r = grid.length;
@@ -10,10 +6,6 @@ class Solution {
         int diff[][] = new int[r][c];
         int a[] = new int[r];
         int b[] = new int[c];
-        // int[] oi = new int[r];
-        // int[] zi = new int[r];
-        // int[] oj = new int[c];
-        // int[] zj = new int[c];
         for(int i = 0 ; i < r;i++)
         {
             int s = 0 , p = 0;
@@ -25,8 +17,6 @@ class Solution {
                     p++;
             }
             a[i] = p-s;
-            // oi[i] = p;
-            // zi[i] = s;
         }
         for(int i = 0 ; i < c;i++)
         {
