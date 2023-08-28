@@ -30,9 +30,9 @@ class Solution {
             }
             b[i] = p-s;
         }
-        for(int i = 0 ; i < grid.length;i++)
+        for(int i = 0 ; i < r;i++)
         {
-            for(int j = 0 ; j < grid[0].length;j++)
+            for(int j = 0 ; j < c;j++)
             {
                 diff[i][j] = a[i] + b[j];
             }
