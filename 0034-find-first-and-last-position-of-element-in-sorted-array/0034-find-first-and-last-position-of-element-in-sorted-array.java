@@ -1,58 +1,55 @@
 class Solution {
-    public int[] searchRange(int[] nums, int target) 
-    {
-        // int a[]=new int [2];
-        // int n = nums.length;
-        //  a[0]=-1;
-        //  a[1]=-1;
-        // for(int i=0,j=n-1;i<=j;)
-        // {
-        //     if(nums[i] == target)
-        //     {
-        //         a[0] = i;
-        //     }
-        //     else
-        //         i++;
-        //     if(nums[j] == target)
-        //     {
-        //         a[1] = j;
-        //     }
-        //     else
-        //         j--;
-        //     if(a[0]!=-1&&a[1]!=-1)
-        //         break;
-        // }
-        // return a;
-        
-        int ans[]={-1,-1};
-        int start=search(nums,target,true);
-        int end=search(nums,target,false);
-        ans[0]=start;
-        ans[1]=end; 
-        return ans;
-    }
-    int search(int nums[],int target,boolean findstartindex){
-        int ans=-1;
-        int start=0;
-        int end=nums.length-1;
-        while(start<=end){
-            int middle=(start+end)/2;
-            if(target<nums[middle])
-                end=middle-1;
-            else if(target>nums[middle])
-                start=middle+1;
-            else
+    public int[] searchRange(int[] nums, int target) {
+        int l = 0;
+        int u = nums.length-1;
+        int[] ar = new int[2];
+        while(l<=u)
+        {
+            int mid = (u+l)/2;
+            if(nums[mid] == target)
             {
-                ans=middle;
-                if(findstartindex == true){
-                    end=middle-1;
+                int first = mid;
+                if(first == 0)
+                    ar[0] = 0;
+                else if(target == nums[0])
+                    ar[0] = 0;
+                else if(nums[first-1] == target)
+                {
+                    while(nums[first] == target && first != 0)
+                    {
+                        first--;
+                    }
+                    ar[0] = first+1;
                 }
-                else{
-                    start=middle+1;
+                else
+                    ar[0] = first;
+                
+                if(mid == nums.length-1)
+                    ar[1] = mid;
+                else if(target == nums[nums.length-1])
+                    ar[1]= nums.length-1;
+                else if(nums[mid+1] == target)
+                {
+                    while(nums[mid] == target && mid != nums.length-1)
+                    {
+                        mid++;
+                    }
+                    ar[1]=mid-1;
                 }
+                else
+                    ar[1]= mid;
+                return ar;
             }
-       }
-        return ans;
+            else if(nums[mid]>target)
+            {
+                u = mid-1;
+            }
+            else 
+                l = mid+1;
+        }
+        ar[0] = -1;
+        ar[1] = -1;
+        return ar;
     }
-    }
-   
+}
+//nb=
