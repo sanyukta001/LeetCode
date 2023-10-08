@@ -62,10 +62,11 @@ class Compute
     static Pair getMinMax(long a[], long n)  
     {
         //Write your code here
+        int l = (int)n;
         long mi = a[0];
         long mx = a[0];
-        for(long i = 0;i<n;i++){
-            long x = a[(int)i];
+        for(int i = 0;i<l;i++){
+            long x = a[i];
             if(mi > x)
                 mi = x;
             if(mx < x)
