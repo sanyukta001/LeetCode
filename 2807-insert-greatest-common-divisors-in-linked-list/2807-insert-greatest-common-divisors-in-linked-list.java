@@ -12,8 +12,10 @@ class Solution {
     int gcd(int x , int y)
     {
         int m = Math.min(x,y);
+        if(x%m == 0 && y%m ==0)
+           return m; 
         int f=1;
-        for(int i = 1; i <=m;i++)
+        for(int i = 1; i <=m/2;i++)
         {
             if(x%i == 0 && y%i == 0)
                 f = i;
