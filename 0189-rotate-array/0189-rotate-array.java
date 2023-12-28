@@ -3,8 +3,8 @@ class Solution {
         int n = nums.length;
         if(n>1)
         {
-            while(n < k)
-                k = k-n;
+            if(n < k)
+                k = k%n;
             int x = 0;
             int[] arr = new int [n];
             for(int j = n-k; j < n; j++)
