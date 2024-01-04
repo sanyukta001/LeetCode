@@ -4,17 +4,18 @@ class Solution {
     int row;
     int column;
     int countZeros;
-    Random random;
+    // Random random;
     public Solution(int m, int n) {
         map = new HashMap<>();
         this.row = m;
         this.column = n;
         countZeros = m*n;
-        random = new Random();
+        // random = new Random();
     }
     
     public int[] flip() {
-        int r = random.nextInt(countZeros);
+        // int r = random.nextInt(countZeros);
+        int r = (int)(Math.random()*countZeros);
         int actual = map.getOrDefault(r,r);
         // if(!map.containsKey(random))
         //     actual = random;
