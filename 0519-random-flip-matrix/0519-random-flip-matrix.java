@@ -4,25 +4,27 @@ class Solution {
     int row;
     int column;
     int countZeros;
-    // Random random;
     public Solution(int m, int n) {
         map = new HashMap<>();
         this.row = m;
         this.column = n;
         countZeros = m*n;
-        // random = new Random();
     }
     
     public int[] flip() {
-        // int r = random.nextInt(countZeros);
         int r = (int)(Math.random()*countZeros);
-        int actual = map.getOrDefault(r,r);
-        // if(!map.containsKey(random))
-        //     actual = random;
-        // else
-        //     actual = map.get(random);
+        int actual;
+        if(!map.containsKey(r))
+            actual = r;
+        else
+            actual = map.get(r);
         int[] result = new int[]{actual/column,actual%column};
-        map.put(r,map.getOrDefault(countZeros-1,countZeros-1));
+        int replace;
+        if(!map.containsKey(countZeros-1))
+            replace = countZeros-1;
+        else
+            replace = map.get(countZeros-1);
+        map.put(r,replace);
         countZeros--;
         return result;
     }
