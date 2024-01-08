@@ -14,19 +14,7 @@ class Solution {
                 {
                     res[i][j] = 0;
                     qp.add(new Pair<>(i,j));
-                    // int dr[] = {0,0,-1,1};
-                    // int dc[] = {-1,1,0,0};
-                    // for(int k = 0; k <4; k++)
-                    // {
-                    //     int r = i+dr[k];
-                    //     int c = j+dc[k];
-                    //     if(r>=0&&r<row&&c>=0&&c<col&&res[r][c]<0)
-                    //         res[r][c] = 1+res[i][j];
-                    // }
-                    
                 }
-                // else if(res[i][j] < 0)
-                //     res[i][j] = 2;
             }
         }
         while(!qp.isEmpty())
