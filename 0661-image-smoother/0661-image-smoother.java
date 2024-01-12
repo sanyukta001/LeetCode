@@ -25,55 +25,6 @@ class Solution {
                         }
                     }
                 }
-//                 sum += img[i][j];
-//                 count++;
-//                 if(j-1 >= 0 && j-1 < col)
-//                 {
-//                     sum = sum + img[i][j-1];
-//                     count++;
-//                 }
-//                 if(j+1 >= 0 && j+1 < col)
-//                 {
-//                     sum = sum + img[i][j+1];
-//                     count++;
-//                 }
-                
-//                 if(i-1 >= 0 && i-1 < row)
-//                 {
-//                     if(j-1 >= 0 && j-1 < col)
-//                     {
-//                         sum = sum+img[i-1][j-1];
-//                         count++;
-//                     }
-//                     if(j >= 0 && j < col)
-//                     {
-//                         sum = sum+img[i-1][j];
-//                         count++;
-//                     }
-//                     if(j+1 >= 0 && j+1 < col)
-//                     {
-//                         sum = sum+img[i-1][j+1];
-//                         count++;
-//                     }
-//                 }
-//                 if(i+1 >= 0 && i+1 < row)
-//                 {
-//                     if(j-1 >= 0 && j-1 < col)
-//                     {
-//                         sum = sum+img[i+1][j-1];
-//                         count++;
-//                     }
-//                     if(j >= 0 && j < col)
-//                     {
-//                         sum = sum+img[i+1][j];
-//                         count++;
-//                     }
-//                     if(j+1 >= 0 && j+1 < col)
-//                     {
-//                         sum = sum+img[i+1][j+1];
-//                         count++;
-//                     }
-//                 }
                 res[i][j] = (sum/count);
             }
         }
