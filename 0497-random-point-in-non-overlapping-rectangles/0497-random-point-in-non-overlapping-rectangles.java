@@ -2,7 +2,6 @@ class Solution {
 
     int[][] rects;
     int total = 0;
-    Random r = new Random();
     List<Integer> list = new ArrayList<Integer>();
     public Solution(int[][] rects) {
         this.rects = rects;
@@ -11,13 +10,11 @@ class Solution {
             total += (rec[2]-rec[0]+1)*(rec[3]-rec[1]+1);
             list.add(total);
         }
-        // list.add(total);
     }
     
     public int[] pick() {
         int select = (int)(Math.random()*(total));
         int lo = 0, hi = rects.length-1;
-        // int mid = 0;
         while(lo<hi)
         {
             int mid = lo+(hi-lo)/2;
