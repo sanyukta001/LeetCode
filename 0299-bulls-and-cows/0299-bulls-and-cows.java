@@ -19,7 +19,7 @@ class Solution {
             
         }
         
-        if(cow!=0)
+        // if(cow!=0)
             cow = Math.abs(cow - bull);
         String res = bull+"A"+cow+"B";
         return res;
