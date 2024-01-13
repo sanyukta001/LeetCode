@@ -3,7 +3,6 @@ class Solution {
         int cow = 0, bull = 0;
         int[] count1 = new int[10];
         int[] count2 = new int[10];
-        // Arrays.fill(count,0);
         for(int i = 0; i < secret.length(); i++)
         {
             char ch = secret.charAt(i);
