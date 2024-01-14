@@ -44,7 +44,6 @@ class Solution {
             if(map.containsKey(sum-k))
             {
                 niceCount+=map.get(sum-k);
-                // map.put(sum-k,map.get(sum-k)+1);
             }
             if(!map.containsKey(sum))
                 map.put(sum,1);
