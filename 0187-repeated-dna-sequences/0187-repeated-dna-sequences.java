@@ -3,18 +3,18 @@ class Solution {
         List<String> list = new ArrayList<>();
         if(s.length() <= 10)
             return list;
-        Map<String,Integer> seen = new HashMap<>();
-        Map<String,Integer> res = new HashMap<>();
+        HashSet<String> seen = new HashSet<>();
+        HashSet<String> res = new HashSet<>();
         for(int i = 0; i < s.length()-9; i++)
         {
             String curr = s.substring(i,i+10);
-            if(seen.containsKey(curr))
-                res.put(curr,1);
-            seen.put(curr,1);
+            if(seen.contains(curr))
+                res.add(curr);
+            seen.add(curr);
         }
-        for(Map.Entry<String,Integer> entry:res.entrySet())
+        for(String entry:res)
         {
-            list.add(entry.getKey());
+            list.add(entry);
         }
         return list;
     }
