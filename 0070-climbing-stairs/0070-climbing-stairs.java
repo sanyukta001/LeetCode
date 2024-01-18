@@ -1,29 +1,20 @@
-class Solution 
-{
-    int fibo(int x,int[] arr)
-    {
-        if(x == 0)
+class Solution{
+    int dp[];
+    int climb(int n){
+        if(n <= 1)
         {
-            arr[0] = 0;
-            return 1;
+            dp[n] = n;
+            return n;
         }
-        if(x == 1)
-        {
-            arr[1] = 1;
-            return 1;
-        }
-       else if(arr[x-1] !=-1 && arr[x-2] !=-1)
-        {
-            arr[x] = arr[x-1] + arr[x-2];
-            return arr[x];
-        }
-        
-        return fibo(x-1,arr)+fibo(x-2,arr);
+        if(dp[n]!=-1)
+            return dp[n];
+        dp[n] = climb(n-1)+climb(n-2);
+        return dp[n];
     }
-    public int climbStairs(int n) 
-    {
-        int arr[] = new int[n+2];
-        Arrays.fill(arr,-1);
-        return fibo(n+1,arr)-1;
+    public int climbStairs(int n) {
+        dp = new int[n+2];
+        Arrays.fill(dp,-1);
+        return climb(n+1);
     }
 }
+//nb=
