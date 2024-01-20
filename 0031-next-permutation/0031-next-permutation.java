@@ -22,7 +22,6 @@ class Solution {
                 j--;
             }
         }
-            //reverse(nums, nums.length);
         else
         {
             int s = nums[index];
