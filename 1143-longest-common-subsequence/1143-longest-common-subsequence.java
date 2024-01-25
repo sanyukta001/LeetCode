@@ -1,7 +1,6 @@
 class Solution {
-    int[][] dp;
     public int longestCommonSubsequence(String s1, String s2) {
-        dp = new int[s1.length()+1][s2.length()+1];
+        int[][]dp = new int[s1.length()+1][s2.length()+1];
         for(int[] a:dp)
         {
             Arrays.fill(a,-1);
