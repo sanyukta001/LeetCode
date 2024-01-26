@@ -22,20 +22,6 @@ class Solution {
             return 1;
         if(maxMove <= 0)
             return 0;
-            // if(i+1 < 0 || i+1 >= m || j < 0 || j >= n)
-            //     count++;
-            // if(i-1 < 0 || i-1 >= m|| j < 0 || j >= n)
-            //     count++;
-            // if(i < 0 || i >= m || j-1 < 0 || j-1 >= n)
-            //     count++;
-            // if(i < 0 || i >= m || j +1 < 0 || j +1 >= n)
-            //     count++;
-            // return count;
-            // if((startRow < 0 || startRow >= m || startColumn < 0 || startColumn >= n))
-            // {
-            //     return 1;
-            // }
-            // return 0;
         if(dp[i][j][maxMove] != -1)
             return dp[i][j][maxMove];
         count += findP(m,n,maxMove-1,i-1,j);
