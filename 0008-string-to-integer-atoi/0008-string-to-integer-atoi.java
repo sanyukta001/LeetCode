@@ -34,20 +34,7 @@ class Solution {
             }
             else
                 break;
-            // if (res > (Integer.MAX_VALUE / 10) || (res == (Integer.MAX_VALUE / 10) && c > 7)){
-            //     return isNegative ? Integer.MIN_VALUE : Integer.MAX_VALUE;
         }
-        
-       // to avoid integer overflow
-      // if (res > (Integer.MAX_VALUE / 10) || (res == (Integer.MAX_VALUE / 10) && c > 7)){
-     //     return isNegative ? Integer.MIN_VALUE : Integer.MAX_VALUE;
-      
-        
-        // res = (res * x);
-        // if (res > Integer.MAX_VALUE)
-        //     return Integer.MAX_VALUE;
-        // if (res < Integer.MIN_VALUE)
-        //     return Integer.MIN_VALUE;
         return (int)(res*x);
     }
 }
