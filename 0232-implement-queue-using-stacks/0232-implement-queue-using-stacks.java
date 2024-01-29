@@ -20,7 +20,6 @@ class MyQueue {
     }
     
     public int peek() {
-        // if(pos == -1)
         return st.get(pos);
     }
     
@@ -28,7 +27,6 @@ class MyQueue {
         if(mpos<pos || pos == -1)
             return true;
         return false;
-        // return st.empty();
     }
 }
 
