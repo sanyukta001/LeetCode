@@ -16,34 +16,21 @@ class Solution {
         
         Stack<Integer> st = new Stack<Integer>();
         int[] res = new int[temperatures.length];
-        // res[temperatures.length-1] = 0;
         
         for(int i = temperatures.length-1;i>=0; i--)
         {
-            // if(st.empty())
-            // {
-            //     res[i] = 0;
-            //     st.push(i);
-            // }
-            // else if(temperatures[i] > temperatures[st.peek()])
-            // {
-                while(st.empty()==false && temperatures[i] >= temperatures[st.peek()])
-                    st.pop();
-                if(st.empty())
-                {
-                    res[i] = 0;
-                    st.push(i);
-                }
-            // }
+            while(st.empty()==false && temperatures[i] >= temperatures[st.peek()])
+                st.pop();
+            if(st.empty())
+            {
+                res[i] = 0;
+                st.push(i);
+            }
             if(temperatures[i] < temperatures[st.peek()])
             {
                 res[i] = st.peek()-i;
                 st.push(i);
             }
-            // if(temperatures[i] == temperatures[st.peek()])
-            // {
-            //     st.pop
-            // }
         }
         return res;
     }
