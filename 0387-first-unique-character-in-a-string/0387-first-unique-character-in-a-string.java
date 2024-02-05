@@ -1,5 +1,7 @@
-class Solution {
-    public int firstUniqChar(String s) {
+class Solution 
+{
+    public int firstUniqChar(String s) 
+    {
         HashMap<Character,Integer> map = new HashMap<>();
         for(int i=0;i<s.length();i++)
         {
@@ -13,11 +15,6 @@ class Solution {
                 map.put(s.charAt(i),1);
             }
         }
-         // for (Map.Entry<Character,Integer> mapElement : map.entrySet()) {
-         //    char key = mapElement.getKey();
-         //    if(mapElement.getValue()==1)
-         //        return s.indexOf(key);
-         // }
         for(int i = 0; i<s.length();i++)
         {
             char x = s.charAt(i);
@@ -25,6 +22,7 @@ class Solution {
                 return i;
         }
         return -1;
+        
     }
 }
-//=nbNB
+//=nbNBnb=
