@@ -12,11 +12,6 @@ class Solution {
                     break;
                 dp[i] = Math.min(dp[i], 1+dp[i-sq]);
             }
-            // dp[i] = i*i;
-            // if(i*i == n)
-            //     return 1;
-            // if(i*i > n)
-            //     break;
         }
         return dp[n];
         
