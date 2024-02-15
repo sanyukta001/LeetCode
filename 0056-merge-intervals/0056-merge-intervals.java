@@ -31,24 +31,12 @@ class Solution {
         }
     }
     public int[][] merge(int[][] intervals) {
-        //Arrays.sort(intervals);
         quickSort(intervals,0,intervals.length-1);
-        // sortbyColumn(intervals, 0);
         int i = 0;
         int curri = -1, currj = -1;
         List<List<Integer>> list = new ArrayList();
         while(i < intervals.length)
-        {
-            // if(curri == -1 && currj == -1 && i == intervals.length-1)
-            // {
-            //     List<Integer> temp = new ArrayList();
-            //     temp.add(intervals[i][0]);
-            //     temp.add(intervals[i][1]);
-            //     list.add(temp);
-            //     i++;
-            //     continue;
-            // }
-            
+        {    
             if(curri == -1 && currj == -1)
             {
                 curri = intervals[i][0];
