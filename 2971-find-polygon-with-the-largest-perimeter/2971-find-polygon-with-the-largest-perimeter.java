@@ -10,7 +10,7 @@ class Solution {
         int n = nums.length;
         Arrays.sort(nums);
         long total = totalSum(nums);
-        for(int i = n-1; i >= 2; i--)
+        for(int i = n-1; i >= 0; i--)
         {
             if(total-nums[i] > nums[i])
                 return total;
