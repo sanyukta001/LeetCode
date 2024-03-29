@@ -19,11 +19,6 @@ class Solution {
                 l = mid + 1;
             }
         }
-        // if(nums[res] == target)
-        //     return res;
-        // else if(res != nums.length -1)
-        //     return res+1;
-        // else
             return res;
     }
 }
