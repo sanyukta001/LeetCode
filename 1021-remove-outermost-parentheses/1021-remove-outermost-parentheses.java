@@ -9,13 +9,13 @@ class Solution {
             {
                 count++;
                 if(count > 1)
-                    str.append(x+"");
+                    str.append(x);
             }
             if(x == ')')
             {
                 count--;
                 if(count != 0)
-                    str.append(x+"");
+                    str.append(x);
             }
         }
         return str.toString();
